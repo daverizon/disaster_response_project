@@ -2,8 +2,8 @@
 This code is aimed at taking message inputs from company Figure Eight Inc., and classifying them into pre-determined categories
 
 
-## Project motivation
-Messages that are provided by Figure Eight Inc. are pre-labeled tweets and text messages from real life disaster.  It was required to create an ETL pipeline for the messages, and then use a Machine Learning Pipeline to build a supervised learning model in order to correcly classify the messages.
+## Project Summary
+Messages are provided by Figure Eight Inc. and are pre-labeled tweets and text messages from real life disasters.  The purpose of this project is to build a model which can automatically classify the message into categories that best describes it.  When a disaster happens, typically emergency agencies receive millions of communications which is beyond their capacity to filter messages that are most important and require immediate assistance.  Roughly 1/1000 messages are relevant to the disaster response professionals so it is critical to be able to categorize the message and send it to the appropriate departments.  This will allow life-saving aid can reach the people most in-need, while at the same time information is still reaching the respective agencies in order to tackle the emergency from the different angles the agencies are responsible for.
 
 ## Libraries used
 pandas - Pandas is a standard library for analyzing and wrangling data from python
