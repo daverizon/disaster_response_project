@@ -56,6 +56,9 @@ def clean_data(df):
 
         # convert column from string to numeric
         categories[column] = pd.to_numeric(categories[column])
+    
+    #There is a category where values of 2 are in the column.  This doesn't make sense since it should be either 0's or 1's.  We will replace all 2's with 1's
+    categories = categories.replace(2, 1)
      
     # drop the original categories column from `df`
     df = df.drop('categories', axis=1)
@@ -64,7 +67,7 @@ def clean_data(df):
     df = pd.concat([df, categories], axis=1)
     
     # drop duplicates
-    # Since rows with the same id can have different data, I'll assume "duplicates" in the instructions mean duplicate rows of data         # where all columns are the same values in order for them to be labeled as "duplicate"
+    # Since rows with the same id can have different data, I'll assume "duplicates" in the instructions mean duplicate rows of data where all columns are the same values in order for them to be labeled as "duplicate"
     df = df.drop_duplicates()
     
     return df
