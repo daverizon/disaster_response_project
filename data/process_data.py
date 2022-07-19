@@ -87,7 +87,7 @@ def save_data(df, database_filepath):
     engine = create_engine('sqlite:///' + database_filepath)
     
     # Save the dataframe into SQL
-    df.to_sql('message_categories', engine, index=False)
+    df.to_sql('message_categories', engine, index=False, if_exists='replace')
     
     return True
 
