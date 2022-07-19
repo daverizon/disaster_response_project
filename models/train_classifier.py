@@ -41,9 +41,6 @@ def load_data(database_filepath):
     X = df['message']
     Y = df.drop(['id', 'message', 'original', 'genre', 'child_alone'], axis=1)
     
-    # Additional cleaning of data to remove any occurrences of 2 and replace with 1
-    Y = Y.replace(2, 1)
-    
     # List of the categories names
     category_names = list(Y.columns)
     
